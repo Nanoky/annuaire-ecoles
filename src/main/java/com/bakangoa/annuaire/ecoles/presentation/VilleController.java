@@ -24,7 +24,7 @@ public class VilleController {
         return ResponseEntity.ok(res);
     }
 
-    @PutMapping("/villes/:id")
+    @PutMapping("/villes/{id}")
     public ResponseEntity<Void> update(
             @RequestBody String name,
             @PathVariable(name = "id") String id
@@ -33,7 +33,7 @@ public class VilleController {
         return ResponseEntity.ok(null);
     }
 
-    @DeleteMapping("/villes/:id")
+    @DeleteMapping("/villes/{id}")
     public ResponseEntity<Void> delete(
             @PathVariable(name = "id") String id
     ) {
