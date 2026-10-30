@@ -1,0 +1,11 @@
+spring:
+  datasource:
+    url: ${DB_URL_DEV}
+    username: ${DB_USERNAME_DEV}
+    password: ${DB_PASSWORD_DEV}
+
+springdoc:
+  api-docs:
+    path: /api-docs
+scalar:
+  path: /docs
