@@ -270,4 +270,8 @@ public class Ecole {
             this.updatedAt = Instant.now();
         }
     }
+
+    public void delete() {
+        this.deletedAt = Instant.now();
+    }
 }

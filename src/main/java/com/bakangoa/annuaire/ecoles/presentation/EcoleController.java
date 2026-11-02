@@ -76,4 +76,12 @@ public class EcoleController {
 
         return ResponseEntity.ok().build();
     }
+
+    @DeleteMapping("/ecoles/{id}")
+    public ResponseEntity<Void> delete(
+            @PathVariable("id") String id
+    ) {
+        this.business.delete(UUID.fromString(id));
+        return ResponseEntity.ok().build();
+    }
 }

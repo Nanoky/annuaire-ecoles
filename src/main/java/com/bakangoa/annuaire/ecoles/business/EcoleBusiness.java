@@ -104,4 +104,14 @@ public class EcoleBusiness {
 
         this.repository.save(ecole);
     }
+
+    public void delete(UUID id) {
+        var optionalEcole = this.repository.findById(id);
+        if (optionalEcole.isEmpty()) throw new EntityNotFoundException("Aucune école ne correspond à l'id " + id.toString());
+        var ecole = optionalEcole.get();
+
+        ecole.delete();
+
+        repository.save(ecole);
+    }
 }
